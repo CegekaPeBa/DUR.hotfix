@@ -1,0 +1,45 @@
+{
+  "id": "c27cd884-344a-484a-a323-bd11506def59",
+  "name": "DUR-Hotfix",
+  "publisher": "Cegeka",
+  "version": "1.0.0.3",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "2444d9f8-9692-4725-aaab-e7a664c010ea",
+      "name": "Durmont Base",
+      "publisher": "Cegeka",
+      "version": "22.0.0.0"
+    },
+    {
+      "id": "f523726f-92bc-4cee-9555-7167abf40d89",
+      "name": "DUR-UPG",
+      "publisher": "Default publisher",
+      "version": "1.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "22.0.0.0",
+  "idRanges": [
+    {
+      "from": 50019,
+      "to": 50109
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "11.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
