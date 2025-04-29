@@ -164,5 +164,21 @@ codeunit 50030 "DUR Hotfix"
             until PurchPrice.Next() = 0;
     end;
 
+    procedure DeleteItemRefTable()
+    var
+        ItemRef: Record "Item Reference";
+        Count: Decimal;
+    begin
+        If Not Confirm('Item Reference löschen?', false) then
+            exit;
+        ItemRef.Reset();
+        ItemRef.SetFilter("Item No.", 'IH_*');
+        ItemRef.SetRange("Reference Type", ItemRef."Reference Type"::Vendor);
+        ItemRef.SetRange("DUR Delete", 'löschen');
+        Count := ItemRef.Count();
+        ItemRef.DeleteAll();
+        Message('%1 Datensätze gelöscht!', Count);
+    end;
+
     var
 }

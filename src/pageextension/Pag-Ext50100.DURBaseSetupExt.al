@@ -28,6 +28,20 @@ pageextension 50100 DURBaseSetupExt extends "DUR Base Setup"
                 end;
 
             }
+            action(Delete)
+            {
+                Caption = 'Markierte Artikelreferenzen löschen';
+                Image = Delete;
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    DURHotfix: codeunit "DUR Hotfix";
+                begin
+                    DURHotfix.DeleteItemRefTable();
+                end;
+
+            }
         }
     }
 
